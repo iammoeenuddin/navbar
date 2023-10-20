@@ -1,0 +1,92 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.container {
+	padding: 0 10%;
+}
+
+.nav {
+	background: rgb(29, 255, 21);
+	padding: 15px 0;
+	position: relative;
+}
+
+.nav .nav_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav .brand a {
+	font-size: 25px;
+	font-weight: bold;
+	color: black;
+}
+
+.navbar ul {
+	display: flex;
+	gap: 30px;
+}
+
+.navbar ul li a {
+	font-size: 18px;
+	color: black;
+}
+
+.nav .button .login-btn {
+	background: black;
+	padding: 10px 20px;
+	color: white;
+	font-size: 18px;
+	border-radius: 15px;
+}
+
+#menu_btn {
+	display: none;
+}
+
+/* responsive for all device*/
+
+@media only screen and (max-width: 768px) {
+	#menu_btn {
+		display: inline-block;
+	}
+
+	.nav .navbar {
+		position: absolute;
+		top: 100%;
+		right: 8%;
+		width: 250px;
+		background: rgb(29, 255, 21);
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s linear;
+	}
+
+	.nav .navbar.show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.nav .navbar ul {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.nav .navbar ul li a {
+		padding: 20px;
+		width: 100%;
+	}
+}
